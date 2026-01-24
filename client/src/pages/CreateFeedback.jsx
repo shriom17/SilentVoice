@@ -1,5 +1,6 @@
 import React from 'react'
 import {useNavigate} from 'react-router-dom';
+import Navigation from '../components/Navigation';
 
 const CreateFeedback = () => {
   const navigate = useNavigate();
@@ -44,6 +45,8 @@ const CreateFeedback = () => {
   };
 
   return (
+    <>
+    <Navigation />
     <div style={styles.container}>
       <h1>Create a New Feedback</h1>
       <form onSubmit={handleSubmit} style={styles.form}>
@@ -73,14 +76,15 @@ const CreateFeedback = () => {
                     style={styles.checkbox} />
                 Enable Comment
             </label>
-      <p>Submit your anonymous feedback here</p>
-    </div>
-    <button type="submit" disabled={loading} style={styles.button}>
+            <p>Submit your anonymous feedback here</p>
+        </div>
+        <button type="submit" disabled={loading} style={styles.button}>
       {loading ? 'Submitting...' : 'Submit Feedback'}
     </button>
   </form>
   {successMessage && <p style={styles.successMessage}>{successMessage}</p>}
   </div>
+  </>
   )
 }
 

@@ -1,8 +1,12 @@
 import React from 'react'
 import {useNavigate} from 'react-router-dom'
+import Navigation from '../components/Navigation'
+
 const Home = () => {
   const navigate = useNavigate()
   return (
+    <>
+    <Navigation />
     <div style={styles.container}>
      <header style ={styles.header}>
         <h1 style = {styles.title}>Welcome To SilentVoice</h1>
@@ -29,6 +33,7 @@ const Home = () => {
         <p style = {styles.footerText}>© 2026 SilentVoice. All rights reserved.</p>
      </footer>
 </div>
+</>
   );
 }
 
