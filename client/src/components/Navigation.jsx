@@ -1,9 +1,11 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { useTheme } from '../context/ThemeContext';
 
 const Navigation = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const { isDarkMode, toggleTheme } = useTheme();
 
   const isActive = (path) => location.pathname === path;
 
@@ -47,6 +49,13 @@ const Navigation = () => {
             }}
           >
             Public Feedback
+          </button>
+          <button
+            onClick={toggleTheme}
+            className="theme-toggle"
+            title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+          >
+            {isDarkMode ? '☀️' : '🌙'}
           </button>
         </div>
       </div>
