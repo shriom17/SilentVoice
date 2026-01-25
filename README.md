@@ -140,41 +140,11 @@ This project includes a `render.yaml` blueprint for easy deployment:
 
 See full deployment guide in the repo.
 
-## 🗺️ Roadmap
-
-- [ ] Export feedback data to CSV/PDF
-- [ ] Custom branding options
-- [ ] Multi-language support
-- [ ] Email notifications for new feedback
-- [ ] Advanced analytics and charts
-- [ ] Custom question types (multiple choice, text, etc.)
-- [ ] Feedback templates
-- [ ] API webhooks
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 👨‍💻 Author
 
 **Shriom**
 - GitHub: [@shriom17](https://github.com/shriom17)
 
-## 🙏 Acknowledgments
-
-- Icons from emoji characters
-- Inspired by anonymous feedback platforms
-- Built with modern web technologies
 
 ---
 
