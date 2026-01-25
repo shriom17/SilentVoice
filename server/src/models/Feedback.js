@@ -4,6 +4,7 @@ const FeedbackSchema = new mongoose.Schema(
     {
         title: {type: String, required: true},
         isActive: {type: Boolean, required: true},
+        inactiveSince: {type: Date, default: null},
         responses: [
             {
                 rating:{type: Number, required: true},

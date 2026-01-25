@@ -12,7 +12,11 @@ export const getAllFeedback = async (req, res) => {
 export const createFeedback = async (req, res) => { 
     try{
         const { title, isActive } = req.body;
-        const newFeedback = new Feedback({ title, isActive });
+        const newFeedback = new Feedback({ 
+            title, 
+            isActive,
+            inactiveSince: isActive ? null : new Date()
+        });
         await newFeedback.save();
         res.status(201).json(newFeedback);
     } catch (error) {
@@ -63,6 +67,7 @@ export const closeForm = async(req, res) => {
             return  res.status(404).json({ message: "Feedback form not found" });
         }
         form.isActive = false;
+        form.inactiveSince = new Date();
         await form.save();
         res.status(200).json({ message: "Feedback form closed successfully" });
     }catch (error) {
@@ -78,6 +83,7 @@ export const toggleFormStatus = async(req, res) => {
             return  res.status(404).json({ message: "Feedback form not found" });
         }
         form.isActive = !form.isActive;
+        form.inactiveSince = form.isActive ? null : new Date();
         await form.save();
         res.status(200).json({ message: `Feedback form ${form.isActive ? 'activated' : 'closed'} successfully`, form });
     }catch (error) {
