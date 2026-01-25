@@ -47,7 +47,7 @@ const CreateFeedback = () => {
   return (
     <>
     <Navigation />
-    <div style={styles.container}>
+    <div style={styles.container} className="form-container">
       <h1>Create a New Feedback</h1>
       <form onSubmit={handleSubmit} style={styles.form}>
         <label>
@@ -59,7 +59,7 @@ const CreateFeedback = () => {
                 style={styles.input} 
                 placeholder='Enter feedback title' />                                                                               
         </label>
-        <div style={styles.options}>
+        <div style={styles.options} className="options-container">
             <label>
                 <input 
                     type="checkbox" 
@@ -82,7 +82,7 @@ const CreateFeedback = () => {
       {loading ? 'Submitting...' : 'Submit Feedback'}
     </button>
   </form>
-  {successMessage && <p style={styles.successMessage}>{successMessage}</p>}
+  {successMessage && <p style={styles.successMessage} className="success-message">{successMessage}</p>}
   </div>
   </>
   )

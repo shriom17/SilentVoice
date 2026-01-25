@@ -51,3 +51,116 @@ body.dark-mode button:hover {
     background-color: rgba(255, 255, 255, 0.1);
     border-color: rgba(255, 255, 255, 0.8);
 }
+
+/* Feature cards */
+.feature-card {
+    background-color: #5d6b79;
+    border-radius: 12px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.featuresTitle {
+    color: #f0f0f0 !important;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .feature-card {
+    background-color: #2d2d2d;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .feature-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Dark mode text adjustments */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: #f0f0f0;
+}
+
+body.dark-mode p {
+    color: #b0b0b0;
+}
+
+/* Specific overrides for inline styles in dark mode */
+body.dark-mode .subtitle-text {
+    color: #b0b0b0 !important;
+}
+
+body.dark-mode .feature-card-title {
+    color: #181818 !important;
+}
+
+body.dark-mode .feature-card-text {
+    color: #0b0b0b !important;
+}
+
+body.dark-mode .secondary-button {
+    background-color: #2d2d2d !important;
+    color: #4da3ff !important;
+    border-color: #4da3ff !important;
+}
+
+body.dark-mode .secondary-button:hover {
+    background-color: #3d3d3d !important;
+}
+
+/* Dark mode for forms and cards */
+body.dark-mode .form-container,
+body.dark-mode .feedback-card,
+body.dark-mode .form-card {
+    background-color: #2d2d2d !important;
+}
+
+body.dark-mode .feedback-card:hover {
+    background-color: #3d3d3d !important;
+}
+
+body.dark-mode .empty-state {
+    background-color: #2d2d2d !important;
+    border-color: #444444 !important;
+}
+
+body.dark-mode .page-title {
+    color: #f0f0f0 !important;
+}
+
+body.dark-mode .page-subtitle,
+body.dark-mode .feedback-meta,
+body.dark-mode .rating-text,
+body.dark-mode .anonymous-note {
+    color: #b0b0b0 !important;
+}
+
+body.dark-mode .section-title,
+body.dark-mode .feedback-title,
+body.dark-mode .form-title,
+body.dark-mode .form-label {
+    color: #f0f0f0 !important;
+}
+
+body.dark-mode .options-container {
+    background-color: #3d3d3d !important;
+    border-color: #444444 !important;
+}
+
+body.dark-mode .success-message {
+    background-color: #1e4620 !important;
+    color: #7ed987 !important;
+    border-color: #2d5a2f !important;
+}
+
+body.dark-mode .error-message {
+    background-color: #4a1c1c !important;
+    color: #f5a3a3 !important;
+    border-color: #6b2929 !important;
+}

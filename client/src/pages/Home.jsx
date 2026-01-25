@@ -10,23 +10,39 @@ const Home = () => {
     <div style={styles.container}>
      <header style ={styles.header}>
         <h1 style = {styles.title}>Welcome To SilentVoice</h1>
-        <h2 style = {styles.subtitle}>Speak Freely, Stay Anonymous</h2>
-        <p style = {styles.subtitle}>Your Voice, Our Voice</p>
-        <p style = {styles.subtitle}>Your Privacy, Our Priority</p>
+        <h2 style = {styles.subtitle} className="subtitle-text">Speak Freely, Stay Anonymous</h2>
+        <p style = {styles.subtitle} className="subtitle-text">Your Voice, Our Voice</p>
+        <p style = {styles.subtitle} className="subtitle-text">Your Privacy, Our Priority</p>
         <div style = {styles.buttonContainer}>
             <button style = {styles.Primarybutton} onClick={() => navigate('/create')}>Create Feedback</button>
-            <button style = {styles.Secondarybutton} onClick={() => navigate('/dashboard')}>View Feedbacks</button>
+            <button style = {styles.Secondarybutton} className="secondary-button" onClick={() => navigate('/dashboard')}>View Feedbacks</button>
         </div>
      </header>
 
      <section style = {styles.featuresSection}>
-        <h2 style = {styles.featuresTitle}>Why Choose SilentVoice?</h2>
-        <ul style = {styles.featuresList}>
-            <li style = {styles.featureItem}>100% Anonymity: Your identity is never revealed.</li>
-            <li style = {styles.featureItem}>Secure Feedback: End-to-end encryption ensures your messages are safe.</li>
-            <li style = {styles.featureItem}>User-Friendly Interface: Easy to navigate and use.</li>
-            <li style = {styles.featureItem}>Instant Notifications: Get notified when feedback is received.</li>
-        </ul>
+        <h2 style = {styles.featuresTitle} className="featuresTitle">Why Choose SilentVoice?</h2>
+        <div style = {styles.featuresGrid}>
+            <div style = {styles.featureCard} className="feature-card">
+                <div style = {styles.featureIcon}>🔒</div>
+                <h3 style = {styles.featureCardTitle} className="feature-card-title">100% Anonymity</h3>
+                <p style = {styles.featureCardText} className="feature-card-text">Your identity is never revealed. Share your thoughts freely without any concerns.</p>
+            </div>
+            <div style = {styles.featureCard} className="feature-card">
+                <div style = {styles.featureIcon}>🛡️</div>
+                <h3 style = {styles.featureCardTitle} className="feature-card-title">Secure Feedback</h3>
+                <p style = {styles.featureCardText} className="feature-card-text">Advanced security measures ensure your messages remain private and protected.</p>
+            </div>
+            <div style = {styles.featureCard} className="feature-card">
+                <div style = {styles.featureIcon}>⚡</div>
+                <h3 style = {styles.featureCardTitle} className="feature-card-title">User-Friendly</h3>
+                <p style = {styles.featureCardText} className="feature-card-text">Intuitive design makes it easy to create and manage feedback forms effortlessly.</p>
+            </div>
+            <div style = {styles.featureCard} className="feature-card">
+                <div style = {styles.featureIcon}>📊</div>
+                <h3 style = {styles.featureCardTitle} className="feature-card-title">Real-time Analytics</h3>
+                <p style = {styles.featureCardText} className="feature-card-text">Get instant insights and track feedback with powerful dashboard analytics.</p>
+            </div>
+        </div>
      </section>
 
      <footer style = {styles.footer}>
@@ -80,24 +96,53 @@ const styles = {
         cursor: 'pointer',
     },
     featuresSection: {
-        marginTop: '40px',
+        marginTop: '60px',
+        marginBottom: '60px',
     },
     featuresTitle: {
-        fontSize: '24px',
+        fontSize: '32px',
         fontWeight: 'bold',
-        marginBottom: '20px',
+        marginBottom: '40px',
+        color: '#333',
     },
-    featuresList: {
-        listStyleType: 'disc',
-        paddingLeft: '20px',
+    featuresGrid: {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+        gap: '30px',
+        maxWidth: '1200px',
+        margin: '0 auto',
+        padding: '0 20px',
     },
-    featureItem: {
+    featureCard: {
+        backgroundColor: '#f8f9fa',
+        borderRadius: '12px',
+        padding: '30px 20px',
+        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+        cursor: 'pointer',
+    },
+    featureIcon: {
+        fontSize: '48px',
+        marginBottom: '15px',
+    },
+    featureCardTitle: {
+        fontSize: '20px',
+        fontWeight: '600',
         marginBottom: '10px',
+        color: '#333',
+    },
+    featureCardText: {
+        fontSize: '14px',
+        color: '#666',
+        lineHeight: '1.6',
     },
     footer: {
         marginTop: '40px',
         borderTop: '1px solid #ccc',
         paddingTop: '20px',
+    },
+    footerText: {
+        color: '#666',
     },
 }
 export default Home

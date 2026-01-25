@@ -65,7 +65,7 @@ const Navigation = () => {
 
 const styles = {
   nav: {
-    backgroundColor: '#007BFF',
+    background: 'linear-gradient(135deg, #193a5c 0%, #007BFF 100%)',
     padding: '15px 0',
     boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
     marginBottom: '20px',

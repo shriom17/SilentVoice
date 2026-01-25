@@ -117,11 +117,11 @@ const PublicFeedback = () => {
     <>
       <Navigation />
       <div style={styles.container}>
-        <h1 style={styles.title}>Anonymous Feedback</h1>
-        <p style={styles.subtitle}>Your voice matters. Share your thoughts anonymously.</p>
+        <h1 style={styles.title} className="page-title">Anonymous Feedback</h1>
+        <p style={styles.subtitle} className="page-subtitle">Your voice matters. Share your thoughts anonymously.</p>
 
         {feedbacks.length === 0 ? (
-          <div style={styles.empty}>
+          <div style={styles.empty} className="empty-state">
             <h2>No Active Feedback Forms</h2>
             <p>There are currently no feedback forms available. Please check back later.</p>
           </div>
@@ -130,16 +130,17 @@ const PublicFeedback = () => {
             {/* Feedback Forms List */}
             {!selectedFeedback && (
               <div style={styles.listSection}>
-                <h2 style={styles.sectionTitle}>Available Feedback Forms</h2>
+                <h2 style={styles.sectionTitle} className="section-title">Available Feedback Forms</h2>
                 <div style={styles.feedbackList}>
                   {feedbacks.map((feedback) => (
                     <div
                       key={feedback._id}
                       style={styles.feedbackCard}
+                      className="feedback-card"
                       onClick={() => selectFeedback(feedback)}
                     >
-                      <h3 style={styles.feedbackTitle}>{feedback.title}</h3>
-                      <div style={styles.feedbackMeta}>
+                      <h3 style={styles.feedbackTitle} className="feedback-title">{feedback.title}</h3>
+                      <div style={styles.feedbackMeta} className="feedback-meta">
                         <span>📝 {feedback.responses.length} responses</span>
                         <span>📅 {new Date(feedback.createdAt).toLocaleDateString()}</span>
                       </div>
@@ -162,13 +163,13 @@ const PublicFeedback = () => {
                   ← Back to List
                 </button>
 
-                <div style={styles.formCard}>
-                  <h2 style={styles.formTitle}>{selectedFeedback.title}</h2>
+                <div style={styles.formCard} className="form-card">
+                  <h2 style={styles.formTitle} className="form-title">{selectedFeedback.title}</h2>
                   
                   <form onSubmit={handleSubmit} style={styles.form}>
                     {/* Rating Section */}
                     <div style={styles.ratingSection}>
-                      <label style={styles.label}>
+                      <label style={styles.label} className="form-label">
                         Your Rating <span style={styles.required}>*</span>
                       </label>
                       <div style={styles.starsContainer}>
@@ -188,7 +189,7 @@ const PublicFeedback = () => {
                         ))}
                       </div>
                       {rating > 0 && (
-                        <p style={styles.ratingText}>
+                        <p style={styles.ratingText} className="rating-text">
                           You rated: {rating} out of 5 stars
                         </p>
                       )}
@@ -196,7 +197,7 @@ const PublicFeedback = () => {
 
                     {/* Comment Section */}
                     <div style={styles.commentSection}>
-                      <label style={styles.label}>
+                      <label style={styles.label} className="form-label">
                         Your Comments <span style={styles.optional}>(optional)</span>
                       </label>
                       <textarea
@@ -215,6 +216,7 @@ const PublicFeedback = () => {
                           ...styles.message,
                           ...(message.type === 'success' ? styles.successMessage : styles.errorMessage),
                         }}
+                        className={message.type === 'success' ? 'success-message' : 'error-message'}
                       >
                         {message.text}
                       </div>
@@ -232,7 +234,7 @@ const PublicFeedback = () => {
                       {submitting ? 'Submitting...' : 'Submit Anonymous Feedback'}
                     </button>
 
-                    <p style={styles.anonymousNote}>
+                    <p style={styles.anonymousNote} className="anonymous-note">
                       🔒 Your feedback is completely anonymous. We don't collect any personal information.
                     </p>
                   </form>
