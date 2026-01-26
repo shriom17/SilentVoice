@@ -75,19 +75,19 @@ Visit `http://localhost:5173` to see the app in action!
 ## 🎯 Usage
 
 ### Creating Feedback Forms
-1. Navigate to **Create Feedback**
+1. Navigate to **[Create Feedback](https://silent-voice-omega.vercel.app/create)**
 2. Enter a descriptive title for your feedback form
 3. Submit to create an active feedback form
 
 ### Collecting Feedback
-1. Share the **Public Feedback** page link
+1. Share the **[Public Feedback](https://silent-voice-omega.vercel.app/feedback)** 
 2. Users select a feedback form
 3. Rate from 1-5 stars
 4. Optionally add anonymous comments
 5. Submit - completely anonymous!
 
 ### Managing Feedback
-1. Visit the **Dashboard**
+1. Visit the **[Dashboard](https://silent-voice-omega.vercel.app/dashboard)**
 2. View all feedback forms with statistics
 3. Toggle forms active/inactive
 4. View detailed analytics (average rating, response count)
