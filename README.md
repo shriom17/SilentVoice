@@ -75,19 +75,19 @@ Visit `http://localhost:5173` to see the app in action!
 ## 🎯 Usage
 
 ### Creating Feedback Forms
-1. Navigate to **Create Feedback**
+1. Navigate to **[Create Feedback](https://silent-voice-omega.vercel.app/create)**
 2. Enter a descriptive title for your feedback form
 3. Submit to create an active feedback form
 
 ### Collecting Feedback
-1. Share the **Public Feedback** page link
+1. Share the **[Public Feedback](https://silent-voice-omega.vercel.app/feedback)** 
 2. Users select a feedback form
 3. Rate from 1-5 stars
 4. Optionally add anonymous comments
 5. Submit - completely anonymous!
 
 ### Managing Feedback
-1. Visit the **Dashboard**
+1. Visit the **[Dashboard](https://silent-voice-omega.vercel.app/dashboard)**
 2. View all feedback forms with statistics
 3. Toggle forms active/inactive
 4. View detailed analytics (average rating, response count)
@@ -140,41 +140,11 @@ This project includes a `render.yaml` blueprint for easy deployment:
 
 See full deployment guide in the repo.
 
-## 🗺️ Roadmap
-
-- [ ] Export feedback data to CSV/PDF
-- [ ] Custom branding options
-- [ ] Multi-language support
-- [ ] Email notifications for new feedback
-- [ ] Advanced analytics and charts
-- [ ] Custom question types (multiple choice, text, etc.)
-- [ ] Feedback templates
-- [ ] API webhooks
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 👨‍💻 Author
 
 **Shriom**
 - GitHub: [@shriom17](https://github.com/shriom17)
 
-## 🙏 Acknowledgments
-
-- Icons from emoji characters
-- Inspired by anonymous feedback platforms
-- Built with modern web technologies
 
 ---
 
