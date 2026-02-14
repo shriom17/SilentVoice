@@ -12,15 +12,22 @@ export const getAllFeedback = async (req, res) => {
 export const createFeedback = async (req, res) => { 
     try{
         const { title, isActive } = req.body;
+        
+        // Validate required fields
+        if (!title || title.trim() === '') {
+            return res.status(400).json({ message: "Title is required" });
+        }
+        
         const newFeedback = new Feedback({ 
             title, 
-            isActive,
+            isActive: isActive !== undefined ? isActive : true,
             inactiveSince: isActive ? null : new Date()
         });
         await newFeedback.save();
         res.status(201).json(newFeedback);
     } catch (error) {
-        res.status(500).json({ message: "Server Error", error });
+        console.error('Create feedback error:', error);
+        res.status(500).json({ message: "Server Error", error: error.message });
     }
 };
 

@@ -17,6 +17,7 @@ const CreateFeedback = () => {
       return;
     }
     setLoading(true);
+    setSuccessMessage('');
     try {
       const response = await fetch(`${import.meta.env.VITE_API_URL}/api/feedback`, 
         {
@@ -28,18 +29,18 @@ const CreateFeedback = () => {
         });
       const data = await response.json();
       if(response.ok) {
-        setSuccessMessage('Feedback form created successfully');
+        setSuccessMessage('Feedback form created successfully!');
         setTitle('');
         setEnableRating(true);
         setEnableComment(true);
-        setLoading(false);
       } else {
-        setSuccessMessage('Failed to create feedback form');
-        setLoading(false);
+        setSuccessMessage(`Failed to create feedback form: ${data.message || 'Unknown error'}`);
+        console.error('Server response:', data);
       }
     } catch (error) {
       console.error('Error submitting feedback:', error);
-      setSuccessMessage('An error occurred while submitting feedback');
+      setSuccessMessage(`Error: ${error.message || 'Network error occurred'}`);
+    } finally {
       setLoading(false);
     }
   };
