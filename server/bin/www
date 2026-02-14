@@ -8,10 +8,18 @@ import app from '../app.js';
 import debug from 'debug';
 import http from 'http';
 import dotenv from 'dotenv';
+import connectDB from '../src/config/db.js';
+import { startCleanupScheduler } from '../src/services/cleanupService.js';
 
 dotenv.config();
 
 const debugLog = debug('server:server');
+
+// Connect to MongoDB
+connectDB();
+
+// Start the cleanup scheduler
+startCleanupScheduler();
 
 /**
  * Get port from environment and store in Express.
